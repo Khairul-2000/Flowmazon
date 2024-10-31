@@ -1,4 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Here’s a README template for your Flowmazon E-Commerce website project, structured with installation, setup, and details on the technologies used. You can customize this further as needed!
+
+---
+
+# Flowmazon E-Commerce Website
+
+Flowmazon is a full-featured e-commerce website built using the latest technologies, offering a modern and responsive shopping experience.
+
+## Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) with App Router
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **UI**: [TailwindCSS](https://tailwindcss.com/) & [DaisyUI](https://daisyui.com/)
+- **Database ORM**: [Prisma](https://www.prisma.io/)
+- **Deployment**: [Vercel](https://vercel.com/)
+
+## Features
+
+- **Responsive Design**: Adapts to any screen size, making it accessible on both desktop and mobile devices.
+- **Product Listings**: Users can browse, search, and filter products.
+- **Cart & Checkout**: Easy-to-use cart and checkout process.
+- **User Authentication**: Sign-up and log-in functionality.
+
+## Getting Started
+
+To get started with Flowmazon, follow these steps.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (>= 14.x)
+- npm or yarn
+- Mongodb (or another Prisma-supported database)
+
+### Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/Khairul-2000/Flowmazon.git
+   cd flowmazon
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server**:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+---
+
+This is a full-stack e-commerce website
 
 ## Getting Started
 
