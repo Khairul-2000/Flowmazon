@@ -13,10 +13,11 @@ export const addProduct = async (formData: FormData) => {
   }
   const name = formData.get("name")?.toString();
   const description = formData.get("description")?.toString();
+  const category = formData.get("category")?.toString();
   const imageUrl = formData.get("imageURL")?.toString();
   const price = Number(formData.get("price") || 0);
 
-  if (!name || !description || !imageUrl || !price) {
+  if (!name || !description || !imageUrl || !price || !category) {
     throw new Error("Missing required fields");
   }
 
@@ -24,6 +25,7 @@ export const addProduct = async (formData: FormData) => {
     data: {
       name,
       description,
+      category,
       imageUrl,
       price,
     },

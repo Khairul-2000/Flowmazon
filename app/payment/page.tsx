@@ -17,7 +17,7 @@ const Payment = () => {
     <div>
       <main className="m-10 mx-auto max-w-6xl rounded-md border bg-gradient-to-tr from-blue-500 to-purple-500 p-10 text-center text-white">
         <div>
-          <h1 className="mb-2 text-4xl font-extrabold">xyz</h1>
+          <h1 className="mb-2 text-4xl font-extrabold">xyx</h1>
           <h2 className="text-2xl">has requested</h2>
           <span className="font-bold">xyz</span>
         </div>

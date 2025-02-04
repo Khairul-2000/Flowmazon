@@ -33,6 +33,17 @@ const AddProductPage = async () => {
           placeholder="Description"
           className="textarea textarea-bordered mb-3 w-full"
         ></textarea>
+        <select
+          name="category"
+          id="category"
+          className="select select-bordered mb-3 w-full"
+        >
+          <option value="electronics">Electronics</option>
+          <option value="clothing">Clothing</option>
+          <option value="furniture">Furniture</option>
+          <option value="books">Books</option>
+          <option value="medicine">Medicine</option>
+        </select>
 
         <input
           type="url"

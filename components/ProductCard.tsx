@@ -12,26 +12,25 @@ const ProductCard = ({ product }: ProductCardProps) => {
     Date.now() - new Date(product.createdAt).getTime() <
     1000 * 60 * 60 * 24 * 7;
   return (
-    <Link
-      href={"/products/" + product.id}
-      className="card w-full bg-base-100 transition-shadow hover:shadow-xl"
-    >
-      <figure>
-        <Image
-          src={product.imageUrl}
-          alt={product.name}
-          width={800}
-          height={400}
-          className="h-48 object-cover"
-        />
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title">{product.name}</h2>
-        {isNew && <div className="badge badge-secondary">NEW</div>}
-        <p>{product.description}</p>
-        <PriceTag price={product.price} />
-      </div>
-    </Link>
+    <div className="flex h-[300px] w-[200px] flex-col items-start justify-start overflow-scroll bg-white">
+      <Link href={"/products/" + product.id}>
+        <figure>
+          <Image
+            src={product.imageUrl}
+            alt={product.name}
+            width={200}
+            height={200}
+            className="h-[200px] w-[200px]"
+          />
+        </figure>
+        <div className="mt-2 overflow-hidden pl-2">
+          <h2 className="text-sm font-semibold">{product.name}</h2>
+          {isNew && <div className="">NEW</div>}
+
+          <PriceTag price={product.price} />
+        </div>
+      </Link>
+    </div>
   );
 };
 

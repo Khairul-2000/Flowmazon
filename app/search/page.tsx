@@ -15,6 +15,12 @@ const page = async ({ searchParams: { query } }: SearchPageProps) => {
             mode: "insensitive",
           },
         },
+        {
+          category: {
+            contains: query,
+            mode: "insensitive",
+          },
+        },
       ],
     },
     orderBy: {
@@ -25,7 +31,7 @@ const page = async ({ searchParams: { query } }: SearchPageProps) => {
     return <div>No Products found</div>;
   }
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid min-h-screen grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}

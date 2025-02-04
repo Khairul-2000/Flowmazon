@@ -49,7 +49,9 @@ const UserMenuButton = ({ session }: UserMenuButtonProps) => {
               Sign Out
             </button>
           ) : (
-            <Link href="/sign-in">Sign In</Link>
+            <Link href="/sign-in" className="text-black">
+              Sign In
+            </Link>
           )}
         </li>
       </ul>
