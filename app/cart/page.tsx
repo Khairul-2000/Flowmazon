@@ -3,9 +3,6 @@ import { Metadata } from "next";
 import CartEntry from "./CartEntry";
 import setProductQuantity from "./actions";
 import { formatPrice } from "@/lib/utils/format";
-import PaymentButton from "@/components/PaymentButton";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../api/auth/[...nextauth]/route";
 
 export const metadata: Metadata = {
   title: "Shopping Cart - Flowmazon",
@@ -13,7 +10,7 @@ export const metadata: Metadata = {
 
 const Cartpage = async () => {
   const cart = await getCart();
-  const session = await getServerSession(authOptions);
+
   return (
     <div>
       <h1 className="mb-6 text-3xl font-bold">Shopping Cart</h1>
@@ -29,7 +26,7 @@ const Cartpage = async () => {
         <p className="mb-3 font-bold">
           Total: {formatPrice(cart?.subTotal || 0)}
         </p>
-        <PaymentButton session={session} cart={cart} />
+        <button className="btn btn-primary sm:w-[200px]">Checkout</button>
       </div>
     </div>
   );
