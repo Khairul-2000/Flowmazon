@@ -45,7 +45,10 @@ const UserMenuButton = ({ session }: UserMenuButtonProps) => {
       >
         <li>
           {user ? (
-            <button onClick={() => signOut({ callbackUrl: "/" })}>
+            <button
+              className="text-black"
+              onClick={() => signOut({ callbackUrl: "/" })}
+            >
               Sign Out
             </button>
           ) : (

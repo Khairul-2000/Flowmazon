@@ -24,19 +24,4 @@ export const categorys = [
     image:
       "https://img.freepik.com/free-photo/packings-pills-capsules-medicines_1339-2254.jpg?t=st=1738506116~exp=1738509716~hmac=de6e163890dc8fc915e084def2717e9ee99da30f89372c90117500b297d05256&w=900",
   },
-  {
-    category: "Medicine",
-    image:
-      "https://img.freepik.com/free-photo/packings-pills-capsules-medicines_1339-2254.jpg?t=st=1738506116~exp=1738509716~hmac=de6e163890dc8fc915e084def2717e9ee99da30f89372c90117500b297d05256&w=900",
-  },
-  {
-    category: "Medicine",
-    image:
-      "https://img.freepik.com/free-photo/packings-pills-capsules-medicines_1339-2254.jpg?t=st=1738506116~exp=1738509716~hmac=de6e163890dc8fc915e084def2717e9ee99da30f89372c90117500b297d05256&w=900",
-  },
-  {
-    category: "Medicine",
-    image:
-      "https://img.freepik.com/free-photo/packings-pills-capsules-medicines_1339-2254.jpg?t=st=1738506116~exp=1738509716~hmac=de6e163890dc8fc915e084def2717e9ee99da30f89372c90117500b297d05256&w=900",
-  },
 ];

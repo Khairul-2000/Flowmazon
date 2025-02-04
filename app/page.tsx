@@ -91,7 +91,7 @@ export default async function Home() {
       </div>
       <div className="w-full">
         <h4 className="my-5 text-2xl">New Arrivals</h4>
-        <div className="flex flex-row flex-wrap items-center justify-around">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
