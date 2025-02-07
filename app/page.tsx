@@ -74,7 +74,7 @@ export default async function Home() {
 
       <div className="my-5 w-full">
         <h4 className="my-6 text-2xl">Categories</h4>
-        <div className="grid grid-cols-8 items-center justify-center gap-0">
+        <div className="grid grid-cols-9 divide-x-2">
           {categorys.map((category) => (
             <Link
               href={`/products/category/${category.category}`}

@@ -24,4 +24,14 @@ export const categorys = [
     image:
       "https://img.freepik.com/free-photo/packings-pills-capsules-medicines_1339-2254.jpg?t=st=1738506116~exp=1738509716~hmac=de6e163890dc8fc915e084def2717e9ee99da30f89372c90117500b297d05256&w=900",
   },
+  {
+    category: "Router",
+    image:
+      "https://www.startech.com.bd/image/cache/catalog/router/wavlink/wl-wn529k2/wl-wn529k2-500x500.jpg",
+  },
+  {
+    category: "Plastic",
+    image:
+      "https://rflbd.com/Application/storage/app/public/relativeContentPath/products/f07a0903c89672ee52d7787be33699e3915278.jpg",
+  },
 ];

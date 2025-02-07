@@ -43,6 +43,8 @@ const AddProductPage = async () => {
           <option value="furniture">Furniture</option>
           <option value="books">Books</option>
           <option value="medicine">Medicine</option>
+          <option value="router">Router</option>
+          <option value="plastic">Plastic</option>
         </select>
 
         <input
