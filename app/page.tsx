@@ -6,6 +6,7 @@ import Link from "next/link";
 import { categorys } from "@/lib/utils/category";
 
 import ImageSlider from "@/components/ImageSlider";
+import JustForYou from "@/components/JustForYou";
 
 // interface HomeProps {
 //   searchParams: { page: string };
@@ -22,7 +23,7 @@ import ImageSlider from "@/components/ImageSlider";
 export default async function Home() {
   // const currentPage = parseInt(page);
 
-  // const pageSize = 6;
+  const pageSize = 5;
 
   // const heroItemCount = 1;
 
@@ -31,13 +32,21 @@ export default async function Home() {
   // const totalPages = Math.ceil((totalItemCount - heroItemCount) / pageSize);
   // console.log(page);
 
-  const products = await prisma.product.findMany({
+  const flashSales = await prisma.product.findMany({
     orderBy: {
       id: "desc",
     },
     // skip:
     //   (currentPage - 1) * pageSize + (currentPage === 1 ? 0 : heroItemCount),
-    // take: pageSize + (currentPage === 1 ? 1 : 0),
+    take: 5,
+  });
+  const newArivals = await prisma.product.findMany({
+    orderBy: {
+      id: "desc",
+    },
+    // skip:
+    //   (currentPage - 1) * pageSize + (currentPage === 1 ? 0 : heroItemCount),
+    take: pageSize,
   });
 
   return (
@@ -56,7 +65,7 @@ export default async function Home() {
           </div>
           <hr className="my-2" />
           <div className="flex flex-row items-center justify-around">
-            {products.map((product) => (
+            {flashSales.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
@@ -92,10 +101,13 @@ export default async function Home() {
       <div className="w-full">
         <h4 className="my-5 text-2xl">New Arrivals</h4>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
-          {products.map((product) => (
+          {newArivals.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
+      </div>
+      <div>
+        <JustForYou />
       </div>
       {/* <div className="my-4 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
         {products.map((product) => (

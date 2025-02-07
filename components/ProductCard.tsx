@@ -12,7 +12,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
     Date.now() - new Date(product.createdAt).getTime() <
     1000 * 60 * 60 * 24 * 7;
   return (
-    <div className="flex h-[300px] w-[250px] flex-col items-center justify-center bg-white hover:scale-105">
+    <div className="flex h-[300px] w-[250px] flex-col items-center justify-center bg-white transition-all duration-[0.8s] hover:shadow-sm hover:shadow-black">
       <Link href={"/products/" + product.id}>
         <figure>
           <Image
