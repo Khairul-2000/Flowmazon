@@ -62,14 +62,14 @@ const ProductPage = async ({ params: { id } }: ProductPageProps) => {
   const suggestedProducts = await getSuggestProducts(product.category, id);
 
   return (
-    <div>
+    <div className="h-full p-4">
       <div className="flex flex-col gap-4 bg-white lg:flex-row lg:items-center">
         <Image
           src={product.imageUrl}
           alt={product.name}
           width={500}
           height={500}
-          className="rounded-lg"
+          className="h-[500px] w-[500px] rounded-lg object-center"
           priority
         />
         <div>
@@ -83,11 +83,46 @@ const ProductPage = async ({ params: { id } }: ProductPageProps) => {
         </div>
       </div>
 
-      <div className="my-10 h-[400px] bg-white">
+      <div className="my-10 h-full bg-white">
         <h4 className="w-full bg-gray-300 p-3 text-xl font-semibold">{`Ratings & Reviews of ${product.name} `}</h4>
-        <div>
+        <div className="p-4">
           <p>⭐️⭐️⭐️⭐️</p>
           <p>Great product</p>
+        </div>
+        <div>
+          <h4 className="w-full bg-gray-300 p-3 text-xl font-semibold">
+            Add a review
+          </h4>
+          <form className="p-4">
+            <textarea className="h-24 w-full" placeholder="Your review" />
+            <button className="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div className="overflow-y-hidden">
+          <h4 className="w-full bg-gray-300 p-3 text-xl font-semibold">
+            Reviews && Comments
+          </h4>
+          <div></div>
+          <div className="p-4">
+            <span>🙍‍♂️</span>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div className="p-4">
+            <span>🙍‍♂️</span>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div className="p-4">
+            <span>🙍‍♂️</span>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div className="p-4">
+            <span>🙍‍♂️</span>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div className="p-4">
+            <span>🙍‍♂️</span>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
         </div>
       </div>
 

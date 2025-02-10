@@ -17,7 +17,7 @@ const ShoppingCartButton = ({ cart }: ShoppingCartButtonProps) => {
       elem.blur();
     }
   }
- 
+
   return (
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-circle btn-ghost">
@@ -46,7 +46,9 @@ const ShoppingCartButton = ({ cart }: ShoppingCartButtonProps) => {
         className="card dropdown-content card-compact z-30 mt-3 w-52 bg-base-100 shadow"
       >
         <div className="card-body">
-          <span className="text-lg font-bold">{cart?.size || 0} Items</span>
+          <span className="text-lg font-bold text-black">
+            {cart?.size || 0} Items
+          </span>
           <span className="text-info">
             SubTotal: {formatPrice(cart?.subTotal || 0)}
           </span>

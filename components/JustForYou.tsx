@@ -19,10 +19,6 @@ const JustForYou = () => {
       if (newProducts && newProducts.length) {
         setProducts([...products, ...newProducts]);
       }
-
-      console.log("New products:", newProducts);
-
-      console.log("Fetched products:", products);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
