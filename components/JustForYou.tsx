@@ -5,9 +5,20 @@ import ProductCard from "./ProductCard";
 
 const JustForYou = () => {
   const [products, setProducts] = useState([]);
-
   const [count, setCount] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [productsCount, setProductsCount] = useState(0);
   const take = 5;
+
+  const fetchProductsCount = async () => {
+    try {
+      const res = await fetch("/api/counts");
+      const count = await res.json();
+      setProductsCount(count);
+    } catch (error) {
+      console.log("Error fetching products count:", error);
+    }
+  };
 
   const fetchProducts = async () => {
     try {
@@ -18,6 +29,7 @@ const JustForYou = () => {
 
       if (newProducts && newProducts.length) {
         setProducts([...products, ...newProducts]);
+        setLoading(false);
       }
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -26,6 +38,7 @@ const JustForYou = () => {
 
   useEffect(() => {
     fetchProducts();
+    fetchProductsCount();
   }, [count]);
 
   return (
@@ -42,10 +55,11 @@ const JustForYou = () => {
         <button
           onClick={() => {
             setCount(count + 1);
+            setLoading(true);
           }}
-          className="w-[500px] border border-blue-700 p-2 text-2xl text-blue-600"
+          className="w-[400px] border border-blue-700 p-1 text-2xl text-blue-600"
         >
-          Load More
+          {loading && productsCount < 8 ? "Loading..." : "Load More"}
         </button>
       </div>
     </div>
